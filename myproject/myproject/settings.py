@@ -72,13 +72,9 @@ WSGI_APPLICATION = "myproject.wsgi.application"
 
 # Database
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
+from . import mysettings
 
-DATABASES = {
-    "default": {
-        "ENGINE": "django.db.backends.sqlite3",
-        "NAME": BASE_DIR / "db.sqlite3",
-    }
-}
+DATABASES = mysettings.DATABASES
 
 
 # Password validation
